@@ -189,8 +189,9 @@ function Home() {
   return (
 
     <div className='bg-blue-200  p-2 lg:p-4 h-screen flex justify-center items-center overflow-auto'>
-    <div className="container p-2 lg:p-4 bg-white shadow-lg  rounded-xl border-solid border-2 border-gray-500 font-sans h-full overflow-auto">
-      <h1 className="text-2xl lg:text-4xl font-bold text-center lg:text-start mb-4 font-sans">Weather Dashboard</h1>
+      <div className='flex justify-center items-center h-full w-full'>
+    <div className="container p-2 lg:p-4 bg-white shadow-lg  rounded-xl border-solid border-2 border-gray-500 font-sans h-full overflow-auto  justify-center items-center ">
+      <h1 className="text-2xl lg:text-4xl font-bold text-center lg:text-start mb-4 font-sans h-[10%]">Weather Dashboard</h1>
 
       <div className="flex mb-4 flex-col lg:flex-row">
         <div className='flex flex-row w-full relative items-center'>
@@ -227,7 +228,7 @@ function Home() {
         <div className="text-center text-red-500">{error}</div>
       ) : (
         <>
-          <div className="bg-[#e6f2ff] p-4 rounded-lg shadow-md mb-4 border-solid border-2 border-[#b4d9ff] overflow-auto">
+          <div className="bg-[#e6f2ff] p-4 rounded-lg shadow-md mb-4 border-solid border-2 border-[#b4d9ff] overflow-auto h-[35%]  flex flex-col">
             <h2 className="text-xl font-bold mb-2">Current Weather in {city || 'New York'}</h2>
             <div className="flex items-center mb-2">
               <span className="text-2xl lg:text-5xl font-bold">{weatherData.current.temperature}°{unit === 'metric' ? 'C' : 'F'}</span>
@@ -240,7 +241,7 @@ function Home() {
             <p className="text-gray-600 text-lg font-sans font-md antialiased">{weatherData.current.description}</p>
           </div>
 
-          <h2 className="text-xl font-bold mb-4">5-Day Forecast</h2>
+          <h2 className="text-xl font-bold mb-4 pt-3 pb-5">5-Day Forecast</h2>
 
           <div className="grid grid-cols-5 gap-3 md:gap-4">
             {weatherData.forecast.map((day, index) => (
@@ -264,7 +265,10 @@ function Home() {
       )}
     </div>
     </div>
+    </div>
   );
 }
 
 export default Home;
+
+

@@ -188,8 +188,8 @@ function Home() {
 
   return (
 
-    <div className='bg-blue-200  p-2 lg:p-4 h-full flex justify-center items-center'>
-    <div className="container p-4 bg-white shadow-lg  rounded-xl border-solid border-2 border-gray-500 font-sans h-full">
+    <div className='bg-blue-200  p-2 lg:p-4 h-screen flex justify-center items-center overflow-auto'>
+    <div className="container p-2 lg:p-4 bg-white shadow-lg  rounded-xl border-solid border-2 border-gray-500 font-sans flex-1 min-h-screen">
       <h1 className="text-2xl lg:text-4xl font-bold text-center lg:text-start mb-4 font-sans">Weather Dashboard</h1>
 
       <div className="flex mb-4 flex-col lg:flex-row">
